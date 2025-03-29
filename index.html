@@ -13,6 +13,7 @@
 
     <!-- Android Chrome Icons -->
     <link rel="manifest" href="site.webmanifest">
+</script>
     <style>
         .image-container {
             position: relative;
@@ -219,10 +220,25 @@
             content: attr(data-tooltip);
             position: absolute;
             top: -25px;
-/*             mix-blend-mode: normal; */
             left: 50%;
             transform: translateX(-50%);
             background-color: rgba(0,0,0,0.8);
+            color: #ffffff;
+            padding: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            font-size: 1vw;
+            white-space: nowrap;
+            z-index: 20;
+            opacity: 1;
+        }
+        .tooltip.show::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
             color: #ffffff;
             padding: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -278,5 +294,18 @@
         <div class="evangelist-mark mask tooltip" data-tooltip="Márk evangélista"></div>
         <div class="evangelist-luke mask tooltip" data-tooltip="Lukács evangélista"></div>
     </div>
+    <script>
+        const tooltips = document.querySelectorAll('.tooltip');
+
+        tooltips.forEach(tooltip => {
+            tooltip.addEventListener('click', function() {
+                // Toggle the 'show' class to show/hide the tooltip
+                tooltip.classList.toggle('show');
+                setTimeout(() => {
+                    tooltip.classList.remove('show');
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>
