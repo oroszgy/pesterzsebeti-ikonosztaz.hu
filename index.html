@@ -29,19 +29,23 @@
             background: rgba(0, 0, 0, 0.7);
             border-radius: 4px;
         }
+        .no-mask {
+            position: absolute;
+/*             background: rgba(0, 0, 0, 0.2); */
+            border: 1px;
+            border-radius: 4px;
+        }
         .theotokos {
             top: 52%;
             left: 23%;
             width: 15%;
             height: 24%;
-            background: rgba(0, 0, 0, 0) !important;
         }
         .christ {
             top: 52%;
             left: 63%;
             width: 14.5%;
             height: 24.5%;
-            background: rgba(0, 0, 0, 0) !important;
         }
         .apostle-1 {
             name: Mark;
@@ -63,7 +67,6 @@
             left: 16%;
             width: 5.5%;
             height: 15%;
-            background: rgba(0, 0, 0, 0) !important;
         }
         .apostle-4 {
             name: Simon;
@@ -178,7 +181,6 @@
             left: 50.5%;
             width: 6.5%;
             height: 16%;
-            background: rgba(0, 0, 0, 0) !important;
         }
         .evangelist-john {
                         top: 81%;
@@ -269,11 +271,11 @@
     <h1>Pesterzsébeti ikonosztáz</p>
     <div class="image-container">
         <img src="terv_crop.png" alt="Pesterzsébeti ikonosztáz">
-        <div class="christ mask tooltip" data-tooltip="Tanító Krisztus"></div>
-        <div class="theotokos mask tooltip" data-tooltip="Istenszülő"></div>
+        <div class="christ no-mask tooltip" data-tooltip="Tanító Krisztus"></div>
+        <div class="theotokos no-mask tooltip" data-tooltip="Istenszülő"></div>
         <div class="apostle-1 mask tooltip" data-tooltip="Márk apostol"></div>
         <div class="apostle-2 mask tooltip" data-tooltip="Barnabás apostol"></div>
-        <div class="apostle-3 mask tooltip" data-tooltip="Tamás apostol"></div>
+        <div class="apostle-3 no-mask tooltip" data-tooltip="Tamás apostol"></div>
         <div class="apostle-4 mask tooltip" data-tooltip="Simon apostol"></div>
         <div class="apostle-5 mask tooltip" data-tooltip="Péter apostol"></div>
         <div class="apostle-6 mask tooltip" data-tooltip="Fülöp apostol"></div>
@@ -285,10 +287,10 @@
         <div class="apostle-12 mask tooltip" data-tooltip="Bertalan apostol"></div>
         <div class="pantocrator mask tooltip" data-tooltip="Pantokrátor"></div>
         <div class="cross mask tooltip"  data-tooltip="Jézus a Kereszten"></div>
-        <div class="gabriel mask tooltip" data-tooltip="Gábriel arkangyal"></div>
-        <div class="rafael mask tooltip" data-tooltip="Rafael arkangyal"></div>
-        <div class="gabriel-small mask tooltip" data-tooltip="Örömhírvétel: Gábriel"></div>
-        <div class="mary-small mask tooltip" data-tooltip="Örömhírvétel: Mária"></div>
+        <div class="gabriel no-mask tooltip" data-tooltip="Gábriel arkangyal"></div>
+        <div class="rafael no-mask tooltip" data-tooltip="Rafael arkangyal"></div>
+        <div class="gabriel-small no-mask tooltip" data-tooltip="Örömhírvétel: Gábriel"></div>
+        <div class="mary-small no-mask tooltip" data-tooltip="Örömhírvétel: Mária"></div>
         <div class="evangelist-john mask tooltip" data-tooltip="János evangélista"></div>
         <div class="evangelist-matthew mask tooltip" data-tooltip="Máté evangélista"></div>
         <div class="evangelist-mark mask tooltip" data-tooltip="Márk evangélista"></div>
