@@ -1,355 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesterzsébeti ikonosztáz</title>
-    <!-- Default favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pesterzsébeti ikonosztáz</title>
+        <!-- Default favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-    <!-- Apple Touch Icon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <!-- Apple Touch Icon for iOS devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- Android Chrome Icons -->
-    <link rel="manifest" href="site.webmanifest">
-</script>
-    <style>
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .mask {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 4px;
-        }
-        .no-mask {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.15);
-/*             border-color: grey; */
-/*             border-style: dotted; */
-            border-radius: 4px;
-        }
-        .theotokos {
-            top: 52%;
-            left: 23%;
-            width: 15%;
-            height: 24%;
-        }
-        .christ {
-            top: 52%;
-            left: 63%;
-            width: 14.5%;
-            height: 24.5%;
-        }
-        .apostle-1 {
-            name: Mark;
-            top: 27%;
-            left: 5%;
-            width: 5.5%;
-            height: 15%;
-        }
-        .apostle-2 {
-            name: Barnabas;
-            top: 27%;
-            left: 10.5%;
-            width: 5.5%;
-            height: 15%;
-        }
-        .apostle-3 {
-            name: Thomas;
-            top: 27%;
-            left: 16%;
-            width: 5.5%;
-            height: 15%;
-        }
-        .apostle-4 {
-            name: Simon;
-            top: 27%;
-            left: 21.5%;
-            width: 5.6%;
-            height: 15%;
-        }
-        .apostle-5 {
-            name: Peter;
-            top: 27%;
-            left: 27.1%;
-            width: 5.6%;
-            height: 15%;
-        }
-        .apostle-6 {
-            name: Philip;
-            position: absolute;
-            top: 27%;
-            left: 32.7%;
-            width: 5.6%;
-            height: 15%;
+        <!-- Android Chrome Icons -->
+        <link rel="manifest" href="site.webmanifest">
+        </script>
+        <style>
+            .image-container {
+                position: relative;
+                display: inline-block;
+            }
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .mask {
+                position: absolute;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 4px;
+            }
+            .no-mask {
+                position: absolute;
+                background: rgba(0, 0, 0, 0.15);
+                /*             border-color: grey; */
+                /*             border-style: dotted; */
+                border-radius: 4px;
+            }
+            .theotokos {
+                top: 52%;
+                left: 23%;
+                width: 15%;
+                height: 24%;
+            }
+            .christ {
+                top: 52%;
+                left: 63%;
+                width: 14.5%;
+                height: 24.5%;
+            }
+            .apostle-1 {
+                name: Mark;
+                top: 27%;
+                left: 5%;
+                width: 5.5%;
+                height: 15%;
+            }
+            .apostle-2 {
+                name: Barnabas;
+                top: 27%;
+                left: 10.5%;
+                width: 5.5%;
+                height: 15%;
+            }
+            .apostle-3 {
+                name: Thomas;
+                top: 27%;
+                left: 16%;
+                width: 5.5%;
+                height: 15%;
+            }
+            .apostle-4 {
+                name: Simon;
+                top: 27%;
+                left: 21.5%;
+                width: 5.6%;
+                height: 15%;
+            }
+            .apostle-5 {
+                name: Peter;
+                top: 27%;
+                left: 27.1%;
+                width: 5.6%;
+                height: 15%;
+            }
+            .apostle-6 {
+                name: Philip;
+                position: absolute;
+                top: 27%;
+                left: 32.7%;
+                width: 5.6%;
+                height: 15%;
 
-        }
-        .apostle-7 {
-            name: Paul;
-            position: absolute;
-            top: 27.4%;
-            left: 62.2%;
-            width: 5.5%;
-            height: 14.7%;
+            }
+            .apostle-7 {
+                name: Paul;
+                position: absolute;
+                top: 27.4%;
+                left: 62.2%;
+                width: 5.5%;
+                height: 14.7%;
 
-        }
-        .apostle-8 {
-            name: Andrew;
-            position: absolute;
-            top: 27.4%;
-            left: 67.7%;
-            width: 5.6%;
-            height: 14.7%;
+            }
+            .apostle-8 {
+                name: Andrew;
+                position: absolute;
+                top: 27.4%;
+                left: 67.7%;
+                width: 5.6%;
+                height: 14.7%;
 
-        }
-        .apostle-9 {
-            name: Matthew;
-                        top: 27.4%;
-            left: 73.3%;
-            width: 5.6%;
-            height: 14.7%;
+            }
+            .apostle-9 {
+                name: Matthew;
+                top: 27.4%;
+                left: 73.3%;
+                width: 5.6%;
+                height: 14.7%;
 
-        }
-        .apostle-10 {
-            name: James;
-                        top: 27.4%;
-            left: 78.9%;
-            width: 5.6%;
-            height: 14.7%;
+            }
+            .apostle-10 {
+                name: James;
+                top: 27.4%;
+                left: 78.9%;
+                width: 5.6%;
+                height: 14.7%;
 
-        }
-        .apostle-11 {
-            name: John;
-                        top: 27.4%;
-            left: 84.5%;
-            width: 5.6%;
-            height: 14.7%;
+            }
+            .apostle-11 {
+                name: John;
+                top: 27.4%;
+                left: 84.5%;
+                width: 5.6%;
+                height: 14.7%;
 
-        }
-        .apostle-12 {
-            name: Bartholomew;
-                        top: 27.4%;
-            left: 90.1%;
-            width: 5.6%;
-            height: 14.7%;
+            }
+            .apostle-12 {
+                name: Bartholomew;
+                top: 27.4%;
+                left: 90.1%;
+                width: 5.6%;
+                height: 14.7%;
 
-        }
-        .pantocrator {
-                        top: 20%;
-            left: 38.7%;
-            width: 23.2%;
-            height: 22%;
+            }
+            .pantocrator {
+                top: 20%;
+                left: 38.7%;
+                width: 23.2%;
+                height: 22%;
 
-        }
-        .cross {
-                        top: 0%;
-            left: 44.2%;
-            width: 12%;
-            height: 19%;
+            }
+            .cross {
+                top: 0%;
+                left: 44.2%;
+                width: 12%;
+                height: 19%;
 
-        }
-        .gabriel {
-                        top: 66.5%;
-            left: 8%;
-            width: 12%;
-            height: 29.5%;
+            }
+            .gabriel {
+                top: 66.5%;
+                left: 8%;
+                width: 12%;
+                height: 29.5%;
 
-        }
-        .rafael {
-                        top: 67.4%;
-            left: 81%;
-            width: 12%;
-            height: 29%;
+            }
+            .rafael {
+                top: 67.4%;
+                left: 81%;
+                width: 12%;
+                height: 29%;
 
-        }
-        .gabriel-small {
-                        top: 65%;
-            left: 43.5%;
-            width: 7%;
-            height: 16%;
+            }
+            .gabriel-small {
+                top: 65%;
+                left: 43.5%;
+                width: 7%;
+                height: 16%;
 
-        }
-        .mary-small {
-                        top: 65%;
-            left: 50.5%;
-            width: 6.5%;
-            height: 16%;
-        }
-        .evangelist-john {
-                        top: 81%;
-            left: 42%;
-            width: 6.6%;
-            height: 7.1%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            z-index: 1;
-        }
-        .evangelist-matthew {
-                        top: 81%;
-            left: 52%;
-            width: 6.6%;
-            height: 7.1%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            z-index: 1;
-        }
-        .evangelist-mark {
-                        top: 88.5%;
-            left: 42%;
-            width: 6.6%;
-            height: 7.6%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            z-index: 1;
-        }
-        .evangelist-luke {
-                        top: 88.5%;
-            left: 52%;
-            width: 6.6%;
-            height: 7.6%;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            z-index: 1;
-        }
-        .tooltip:hover::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0,0,0,0.8);
-            color: #ffffff;
-            padding: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            border-radius: 4px;
-            font-size: 1vw;
-            white-space: nowrap;
-            z-index: 20;
-            opacity: 1;
-        }
-        .tooltip.show::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            padding: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            border-radius: 4px;
-            font-size: 1vw;
-            white-space: nowrap;
-            z-index: 20;
-            opacity: 1;
-        }
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+            }
+            .mary-small {
+                top: 65%;
+                left: 50.5%;
+                width: 6.5%;
+                height: 16%;
+            }
+            .evangelist-john {
+                top: 81%;
+                left: 42%;
+                width: 6.6%;
+                height: 7.1%;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .evangelist-matthew {
+                top: 81%;
+                left: 52%;
+                width: 6.6%;
+                height: 7.1%;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .evangelist-mark {
+                top: 88.5%;
+                left: 42%;
+                width: 6.6%;
+                height: 7.6%;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .evangelist-luke {
+                top: 88.5%;
+                left: 52%;
+                width: 6.6%;
+                height: 7.6%;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 20px;
+                z-index: 1;
+            }
+            .tooltip:hover::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #ffffff;
+                padding: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                font-size: 1vw;
+                white-space: nowrap;
+                z-index: 20;
+                opacity: 1;
+            }
+            .tooltip.show::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #ffffff;
+                padding: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                font-size: 1vw;
+                white-space: nowrap;
+                z-index: 20;
+                opacity: 1;
+            }
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
-body {
-    background-color: #EFF0EB;
-    margin: 0;
-    padding: 0;
-}
+            body {
+                background-color: #EFF0EB;
+                margin: 0;
+                padding: 0;
+            }
 
-h1 {
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-size: 40px;
-    color: #6A4C1E; /* Warmer brown */
-    margin-top: 40px;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
-    letter-spacing: 1px;
-}
-h2 {
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-size: 28px;
-    color: #5A3E15; /* Slightly darker than h1 for contrast */
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.8px;
-    font-weight: 600; /* Slightly lighter than h1 for hierarchy */
-}
-p {
-    font-family: 'Merriweather', serif;
-    font-size: 18px;
-    color: #333;  /* Darker for contrast */
-    line-height: 1.6;  /* Improves readability */
-    text-align: justify;
-    max-width: 800px;  /* Prevents overly wide text */
-    margin: 20px auto;  /* Centers the text block */
-    padding: 0 15px;
-}
-    </style>
-</head>
+            h1 {
+                text-align: center;
+                font-family: 'Merriweather', serif;
+                font-size: 40px;
+                color: #6A4C1E; /* Warmer brown */
+                margin-top: 40px;
+                text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+                letter-spacing: 1px;
+            }
+            h2 {
+                text-align: center;
+                font-family: 'Merriweather', serif;
+                font-size: 28px;
+                color: #5A3E15; /* Slightly darker than h1 for contrast */
+                margin-top: 30px;
+                margin-bottom: 15px;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+                letter-spacing: 0.8px;
+                font-weight: 600; /* Slightly lighter than h1 for hierarchy */
+            }
+            p {
+                font-family: 'Merriweather', serif;
+                font-size: 18px;
+                color: #333; /* Darker for contrast */
+                line-height: 1.6; /* Improves readability */
+                text-align: justify;
+                max-width: 800px; /* Prevents overly wide text */
+                margin: 20px auto; /* Centers the text block */
+                padding: 0 15px;
+            }
+        </style>
+    </head>
 
-<body>
-    <h1>Pesterzsébeti ikonosztáz</h1>
-    <p>Kedves Látogató!</p>
-    <p>Sok szeretettel köszöntünk a Pesterzsébeti Görögkatolikus Egyházközség Urunk Színeváltozása templomának ikonosztáz-adománygyűjtő oldalán!
-    <p>Ezen az oldalon nyomon követheted az adománygyűjtés aktuális állását. A szürke fedőréteggel ellátott ikonok még támogatásra várnak, míg a teljesen látható ikonok már megtalálták nagylelkű támogatójukat. Ha az egérkurzort egy ikon fölé viszed, megjelenik annak neve.</p>
-    <p>Ha szeretnél hozzájárulni az ikonosztáz megvalósításához, kérjük, vedd fel velünk a kapcsolatot a megadott telefonszámon vagy e-mail címen. Bankszámlaszámunkat is közzétesszük, azonban arra kérünk, hogy adományozás előtt mindenképpen lépj kapcsolatba velünk, és jelezd, melyik ikont szeretnéd támogatni.</p>
-    <p>Köszönjük segítségedet és nagylelkűségedet!</p>
-    <h2>Elérhetőségeink</h2>
-    <p>Az adománygyűjtés koordinátora Barta István, akivel a
-    <span class='email-loader-container'><span>Loading Email...</span><img src='jgdz69hhksp6.png' style='display:none'><canvas style='display:none'></canvas><noscript>You must enable JavaScript to view the email.</noscript><script>(function (){var a,b,c,e,i,f,p,w,g,z,s,r,l;z=document;s=z.querySelector.bind(z);r=Math.random().toString().substring(2);l=s(".email-loader-container");l.className="";l.id="e"+r;z="#e"+r;window.addEventListener("load",function (){g=s(z+">canvas");w=s(z+">img");if(w.complete&&w.naturalHeight!==0){q();}else{w.onload=q;}function q(){c=g.width=g.height=w.width;f=g.getContext("2d",{willReadFrequently:true});f.drawImage(w,0,0);b="";p=String.fromCharCode;w=parseInt;e=f.getImageData(0,0,c,c).data;r=[];c=0;for(i=0;i<e.length;i++){c++;if(c==4){c=0;if(e[i]==0){break;}continue;}r.push(e[i]>127?1:0);if(r.length>=7){b+=p(w(r.splice(0,7).join(""),2));}}try{for(i=0;i<100;i++){b=atob(b);}}catch(g){a="";for(i=0;i<b.length;i+=3){c=p(w(b.substr(i,3).replace(/\./,""),10));a+=c;}}l.outerHTML=a;}});})();</script></span>
-    telefonszámon vagy az
-    <span class='email-loader-container'><span>Loading Email...</span><img src='c4uzzteto5x9.png' style='display:none'><canvas style='display:none'></canvas><noscript>You must enable JavaScript to view the email.</noscript><script>(function (){var a,b,c,e,i,f,p,w,g,z,s,r,l;z=document;s=z.querySelector.bind(z);r=Math.random().toString().substring(2);l=s(".email-loader-container");l.className="";l.id="e"+r;z="#e"+r;window.addEventListener("load",function (){g=s(z+">canvas");w=s(z+">img");if(w.complete&&w.naturalHeight!==0){q();}else{w.onload=q;}function q(){c=g.width=g.height=w.width;f=g.getContext("2d",{willReadFrequently:true});f.drawImage(w,0,0);b="";p=String.fromCharCode;w=parseInt;e=f.getImageData(0,0,c,c).data;r=[];c=0;for(i=0;i<e.length;i++){c++;if(c==4){c=0;if(e[i]==0){break;}continue;}r.push(e[i]>127?1:0);if(r.length>=7){b+=p(w(r.splice(0,7).join(""),2));}}try{for(i=0;i<100;i++){b=atob(b);}}catch(g){a="";for(i=0;i<b.length;i+=3){c=p(w(b.substr(i,3).replace(/\./,""),10));a+=c;}}l.outerHTML=a;}});})();</script></span>
-    címen tudsz kapcsolatba lépni<p>
-    <h2>Bankszámlaszámunk</h2>
-    <p>
-    CIB Bank<br/>
-    (HU 03) 11102704-18251218-36000001</br>
-    <b>Adószám:</b> 18251218-1-43
-    </p>
-    <div class="image-container">
-        <img src="terv_crop.png" alt="Pesterzsébeti ikonosztáz">
-        <div class="christ no-mask tooltip" data-tooltip="Tanító Krisztus"></div>
-        <div class="theotokos no-mask tooltip" data-tooltip="Istenszülő"></div>
-        <div class="apostle-1 mask tooltip" data-tooltip="Márk apostol"></div>
-        <div class="apostle-2 mask tooltip" data-tooltip="Barnabás apostol"></div>
-        <div class="apostle-3 no-mask tooltip" data-tooltip="Tamás apostol"></div>
-        <div class="apostle-4 mask tooltip" data-tooltip="Simon apostol"></div>
-        <div class="apostle-5 mask tooltip" data-tooltip="Péter apostol"></div>
-        <div class="apostle-6 mask tooltip" data-tooltip="Fülöp apostol"></div>
-        <div class="apostle-7 mask tooltip" data-tooltip="Pál apostol"></div>
-        <div class="apostle-8 mask tooltip" data-tooltip="András apostol"></div>
-        <div class="apostle-9 mask tooltip" data-tooltip="Máté apostol"></div>
-        <div class="apostle-10 mask tooltip" data-tooltip="Jakab apostol"></div>
-        <div class="apostle-11 mask tooltip" data-tooltip="János apostol"></div>
-        <div class="apostle-12 mask tooltip" data-tooltip="Bertalan apostol"></div>
-        <div class="pantocrator mask tooltip" data-tooltip="Pantokrátor"></div>
-        <div class="cross mask tooltip"  data-tooltip="Jézus a Kereszten"></div>
-        <div class="gabriel no-mask tooltip" data-tooltip="Gábriel arkangyal"></div>
-        <div class="rafael no-mask tooltip" data-tooltip="Rafael arkangyal"></div>
-        <div class="gabriel-small no-mask tooltip" data-tooltip="Örömhírvétel: Gábriel"></div>
-        <div class="mary-small no-mask tooltip" data-tooltip="Örömhírvétel: Mária"></div>
-        <div class="evangelist-john mask tooltip" data-tooltip="János evangélista"></div>
-        <div class="evangelist-matthew mask tooltip" data-tooltip="Máté evangélista"></div>
-        <div class="evangelist-mark mask tooltip" data-tooltip="Márk evangélista"></div>
-        <div class="evangelist-luke mask tooltip" data-tooltip="Lukács evangélista"></div>
-    </div>
-    <script>
-        const tooltips = document.querySelectorAll('.tooltip');
+    <body>
+        <h1>Pesterzsébeti ikonosztáz</h1>
+        <p>Kedves Látogató!</p>
+        <p>Sok szeretettel köszöntünk a Pesterzsébeti Görögkatolikus Egyházközség Urunk Színeváltozása templomának ikonosztáz-adománygyűjtő oldalán!
+        <p>Ezen az oldalon nyomon követheted az adománygyűjtés aktuális állását. A szürke fedőréteggel ellátott ikonok még támogatásra várnak, míg a teljesen látható ikonok már megtalálták nagylelkű támogatójukat. Ha az egérkurzort egy ikon fölé viszed, megjelenik annak neve.</p>
+        <p>Ha szeretnél hozzájárulni az ikonosztáz megvalósításához, kérjük, vedd fel velünk a kapcsolatot a megadott telefonszámon vagy e-mail címen. Bankszámlaszámunkat is közzétesszük, azonban arra kérünk, hogy adományozás előtt mindenképpen lépj kapcsolatba velünk, és jelezd, melyik ikont szeretnéd támogatni.</p>
+        <p>Köszönjük segítségedet és nagylelkűségedet!</p>
+        <h2>Elérhetőségeink</h2>
+        <p>Az adománygyűjtés koordinátora Barta István, akivel a
+        <span class='email-loader-container'><span>Loading Email...</span><img src='jgdz69hhksp6.png' style=' display:none'><canvas style=' display:none'></canvas><noscript>You must enable JavaScript to view the email.</noscript><script>(function ()   {
 
-        tooltips.forEach(tooltip => {
-            tooltip.addEventListener('click', function() {
-                // Toggle the 'show' class to show/hide the tooltip
-                tooltip.classList.toggle('show');
-                setTimeout(() => {
-                    tooltip.classList.remove('show');
-                }, 2000);
+
+                var a,   b,   c,   e,   i,   f,   p,   w,   g,   z,   s,   r,   l;
+
+
+                z   =   document;
+
+
+                s   =   z.querySelector.bind(z);
+
+
+                r   =   Math.random().toString().substring(2);
+
+
+                l   =   s(".email-loader-container");
+
+
+                l.className   =   "";
+
+
+                l.id   =   "e"   +   r;
+
+
+                z   =   "#e"   +   r;
+
+
+                window.addEventListener("load",   function ()   {
+
+
+                    g   =   s(z   +   ">canvas");
+
+
+                    w   =   s(z   +   ">img");
+
+
+                    if   (w.complete   &&   w.naturalHeight   !==   0)   {q();}   else   {w.onload   =   q;}
+
+
+                    function q()   {
+
+
+                        c   =   g.width   =   g.height   =   w.width;
+
+
+                        f   =   g.getContext("2d",   {willReadFrequently:   true});
+
+
+                        f.drawImage(w,   0,   0);
+
+
+                        b   =   "";
+
+
+                        p   =   String.fromCharCode;
+
+
+                        w   =   parseInt;
+
+
+                        e   =   f.getImageData(0,   0,   c,   c).data;
+
+
+                        r   =   [];
+
+
+                        c   =   0;
+
+
+                        for   (i   =   0;   i   <   e.length;   i++)   {
+
+
+                            c++;
+
+
+                            if   (c   ==   4)   {
+
+
+                                c   =   0;
+
+
+                                if   (e[i]   ==   0)   {break;}
+
+
+                                continue;
+
+
+                            }
+
+
+                            r.push(e[i]   >   127   ?   1   :   0);
+
+
+                            if   (r.length   >=   7)   {b   +=   p(w(r.splice(0,   7).join(""),   2));}
+
+
+                        }
+
+
+                        try   {for   (i   =   0;   i   <   100;   i++)   {b   =   atob(b);}}catch(g)   {
+
+
+                            a   =   "";
+
+
+                            for   (i   =   0;   i   <   b.length;   i   +=   3)   {
+
+
+                                c   =   p(w(b.substr(i,   3).replace(/\./,   ""),   10));
+
+
+                                a   +=   c;
+
+
+                            }
+
+
+                        }
+
+
+                        l.outerHTML   =   a;
+
+
+                    }
+
+
+                });
+
+
+            })();</script></span>
+        telefonszámon vagy az
+        <span class='email-loader-container'><span>Loading Email...</span><img src='c4uzzteto5x9.png' style=' display:none'><canvas style=' display:none'></canvas><noscript>You must enable JavaScript to view the email.</noscript><script>(function ()   {
+
+
+                var a,   b,   c,   e,   i,   f,   p,   w,   g,   z,   s,   r,   l;
+
+
+                z   =   document;
+
+
+                s   =   z.querySelector.bind(z);
+
+
+                r   =   Math.random().toString().substring(2);
+
+
+                l   =   s(".email-loader-container");
+
+
+                l.className   =   "";
+
+
+                l.id   =   "e"   +   r;
+
+
+                z   =   "#e"   +   r;
+
+
+                window.addEventListener("load",   function ()   {
+
+
+                    g   =   s(z   +   ">canvas");
+
+
+                    w   =   s(z   +   ">img");
+
+
+                    if   (w.complete   &&   w.naturalHeight   !==   0)   {q();}   else   {w.onload   =   q;}
+
+
+                    function q()   {
+
+
+                        c   =   g.width   =   g.height   =   w.width;
+
+
+                        f   =   g.getContext("2d",   {willReadFrequently:   true});
+
+
+                        f.drawImage(w,   0,   0);
+
+
+                        b   =   "";
+
+
+                        p   =   String.fromCharCode;
+
+
+                        w   =   parseInt;
+
+
+                        e   =   f.getImageData(0,   0,   c,   c).data;
+
+
+                        r   =   [];
+
+
+                        c   =   0;
+
+
+                        for   (i   =   0;   i   <   e.length;   i++)   {
+
+
+                            c++;
+
+
+                            if   (c   ==   4)   {
+
+
+                                c   =   0;
+
+
+                                if   (e[i]   ==   0)   {break;}
+
+
+                                continue;
+
+
+                            }
+
+
+                            r.push(e[i]   >   127   ?   1   :   0);
+
+
+                            if   (r.length   >=   7)   {b   +=   p(w(r.splice(0,   7).join(""),   2));}
+
+
+                        }
+
+
+                        try   {for   (i   =   0;   i   <   100;   i++)   {b   =   atob(b);}}catch(g)   {
+
+
+                            a   =   "";
+
+
+                            for   (i   =   0;   i   <   b.length;   i   +=   3)   {
+
+
+                                c   =   p(w(b.substr(i,   3).replace(/\./,   ""),   10));
+
+
+                                a   +=   c;
+
+
+                            }
+
+
+                        }
+
+
+                        l.outerHTML   =   a;
+
+
+                    }
+
+
+                });
+
+
+            })();</script></span>
+        címen tudsz kapcsolatba lépni<p>
+        <h2>Bankszámlaszámunk</h2>
+        <p>
+            CIB Bank<br/>
+            (HU 03) 11102704-18251218-36000001</br>
+            <b>Adószám:</b> 18251218-1-43
+        </p>
+        <div class="image-container">
+            <img src="terv_crop.png" alt="Pesterzsébeti ikonosztáz">
+            <div class="christ no-mask tooltip" data-tooltip="Tanító Krisztus"></div>
+            <div class="theotokos no-mask tooltip" data-tooltip="Istenszülő"></div>
+            <div class="apostle-1 mask tooltip" data-tooltip="Márk apostol"></div>
+            <div class="apostle-2 mask tooltip" data-tooltip="Barnabás apostol"></div>
+            <div class="apostle-3 no-mask tooltip" data-tooltip="Tamás apostol"></div>
+            <div class="apostle-4 mask tooltip" data-tooltip="Simon apostol"></div>
+            <div class="apostle-5 mask tooltip" data-tooltip="Péter apostol"></div>
+            <div class="apostle-6 mask tooltip" data-tooltip="Fülöp apostol"></div>
+            <div class="apostle-7 mask tooltip" data-tooltip="Pál apostol"></div>
+            <div class="apostle-8 mask tooltip" data-tooltip="András apostol"></div>
+            <div class="apostle-9 mask tooltip" data-tooltip="Máté apostol"></div>
+            <div class="apostle-10 mask tooltip" data-tooltip="Jakab apostol"></div>
+            <div class="apostle-11 mask tooltip" data-tooltip="János apostol"></div>
+            <div class="apostle-12 mask tooltip" data-tooltip="Bertalan apostol"></div>
+            <div class="pantocrator mask tooltip" data-tooltip="Pantokrátor"></div>
+            <div class="cross mask tooltip" data-tooltip="Jézus a Kereszten"></div>
+            <div class="gabriel no-mask tooltip" data-tooltip="Gábriel arkangyal"></div>
+            <div class="rafael no-mask tooltip" data-tooltip="Rafael arkangyal"></div>
+            <div class="gabriel-small no-mask tooltip" data-tooltip="Örömhírvétel: Gábriel"></div>
+            <div class="mary-small no-mask tooltip" data-tooltip="Örömhírvétel: Mária"></div>
+            <div class="evangelist-john mask tooltip" data-tooltip="János evangélista"></div>
+            <div class="evangelist-matthew mask tooltip" data-tooltip="Máté evangélista"></div>
+            <div class="evangelist-mark mask tooltip" data-tooltip="Márk evangélista"></div>
+            <div class="evangelist-luke mask tooltip" data-tooltip="Lukács evangélista"></div>
+        </div>
+        <script>
+            const tooltips = document.querySelectorAll('.tooltip');
+
+            tooltips.forEach(tooltip => {
+                tooltip.addEventListener('click', function   () {
+
+
+
+                    // Toggle the 'show' class to show/hide the tooltip
+                    tooltip.classList.toggle('show');
+                    setTimeout(() => {
+                        tooltip.classList.remove('show');
+                    }, 2000);
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
